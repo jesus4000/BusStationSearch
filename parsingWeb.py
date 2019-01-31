@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 import datetime
 from bs4 import BeautifulSoup
+# after adding DB lib
 
 def daumMapweb(query):
 
