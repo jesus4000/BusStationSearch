@@ -27,6 +27,16 @@ def index():
     return render_template('index.html')
 
 
+
+@app.route('/whois', methods=['POST'])
+def who(popupFlag=None):
+    popupFlag = request.form['aboutWho']
+    # popupFlag = request.form.get('aboutWho', False)
+    print(popupFlag)
+    return render_template('layout.html', popupFlag=popupFlag)
+
+
+
 @app.route('/search')
 @app.route('/<string:keyword>')
 def search(keyword='', x_Axis=None, y_Axis=None):
@@ -68,6 +78,7 @@ def mapSearch(keyword=None):
     except:
         popupFlag = 'e'
         return render_template('layout.html', popupFlag=popupFlag)
+
 
 
 # Need DB connection
