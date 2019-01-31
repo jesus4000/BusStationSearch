@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<HEAD>
+<TITLE>Bus station layout</TITLE>
+</HEAD>
+<style tyle="text/css">
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#wrapper {
+	position:relative;
+    min-height:100%;
+}
+#header {
+	height:15%;
+    background:#ccc;
+}
+#container {
+    padding:20px;
+    overflow: auto;
+}
+
+#footer {
+    position:absolute;
+    bottom:10px;
+    width:100%;
+    height:40px;
+    background:#ffffff;
+    font-size:13px;
+    text-align:center;
+}
+</style>
+
+<BODY>
+
+<div id="wrapper">
+    <div id="header">
+        {% include 'search.html' %}
+    </div>
+
+    <div id="container">
+    {% if selectFlag == 'n' %}
+        {% include 'search_list.html' %}
+
+    <!--{% elif (selectFlag == 'c') and (popupFlag == 'n') %}-->
+        <!--{% include 'search_????.html' %}-->
+
+    {% elif popupFlag == 'e' %}
+        {% include 'popupWindow0.html' %}
+
+    {% else %}
+
+    {% endif %}
+	</div>
+
+    <div id="footer">
+        <p style="line-height:0.5;">made by H-made Open Project</p>
+        <p style="line-height:0.2;">GNU General Public License v3.0</p>
+    </div>
+</div>
+
+</BODY>
+</HTML>
