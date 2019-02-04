@@ -1,0 +1,4 @@
+Updating service [default] (this may take several minutes)...failed.
+ERROR: (gcloud.app.deploy) Error Response: [9]
+Application startup error:
+/bin/sh: 1: exec: gunicorn: not found
