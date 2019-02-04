@@ -8,7 +8,7 @@ global host
 global port
 global apikey
 host = 'http://localhost'
-port = '5300'
+port = '8080'
 
 
 @app.after_request
